@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #e0a2a2;
+  background-image: url("bg.jpg");
+}
+
+#card, #card-front, #card-inside {
+  height: 86vh;
+  max-height: 100vw;
+}
+
+.wrap {
+  padding: 0.1em;
+  height: 100%;
+  width: 100%;
+}
+
+#card-front, #card-inside {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.front-image {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sthetho {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hbd {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lines{
+  z-index: 8;
+  font-family: 'Indie Flower', cursive;
+  font-style: italic;
+  font-size: 2.1vmin;
+  color: #331717;
+  opacity: 0.9;
+  text-align: center;
+  position: relative;
+  top: 60%;
+  left: 28%;
+  width: 37%;
+  height: 40%;
+  -webkit-animation: slidein 1.5s ease-in-out 1 normal;
+          animation: slidein 1.5s ease-in-out 1 normal;
+}
+
+#card-inside .wrap {
+  z-index: 0;
+  background: #FFEFEF;
+  -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+  font-family: 'Indie Flower', cursive;
+  font-style: italic;
+  color: #331717;
+  text-align: center;
+}
+
+#letter {
+  margin-top: 1em;
+  width: 92%;
+  height: 92%;  
+  -webkit-box-shadow:0 1px 8px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2) inset;
+          box-shadow:0 1px 8px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2) inset;
+}
+
+#card-inside .wrap i {
+  z-index: 0;
+  font-size: 3.5vmin;
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  text-align: center;
+}
+
+#card {
+  width: 130vh; /* twice page size*/
+  max-width: 143vw;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#card-front {
+  z-index: 1;
+  background-color: #FFEFEF;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+}
+
+#card-front:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: #444;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
+}
+
+button {
+  z-index: 10;
+  background: #F44;
+  color: #FFF;
+  font-family: 'Indie Flower', cursive;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: .4em;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+#open {
+  position: absolute;
+  bottom: 1em;
+  right: -11px;
+  -webkit-animation: slidein 5s ease-in-out 1 normal;
+          animation: slidein 5s ease-in-out 1 normal;
+}
+
+#close {
+  position: absolute;
+  bottom: 1em;
+  left: -11px;
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #F22;
+}
+
+#card.open-fully {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#card.open-fully #close,
+#card-open-half #close {
+  display: inline;
+}
+
+#card.open-fully #open, #close{
+  display: none;
+}
+
+#card.open-half #card-front,
+#card.close-half #card-front {
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+#card.open-half .shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#card.open-fully #card-front,
+#card.close-half #card-front {
+  background: #FFEFEF;
+}
+
+#card.open-fully #card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+#card.open-fully .shadow {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-front_inside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width:  100%;
+  margin: auto;
+  background: #FFEFEF;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(-1px) rotateY(180deg);
+          transform: translateZ(-1px) rotateY(180deg);
+}
+
+.front-inside-image {
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+
+.front-inside-image:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+
+@-webkit-keyframes slidein {
+    0% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slidein {
+    0% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
+}

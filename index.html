@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Setup -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Happy Birthday Socksy!</title>
+		<!-- Meta !ɘƨolƆ-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="theme-color" content="#F26B38">
+		<!-- Load -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+		<link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<!-- Main code -->
+	<body>
+		<div id="card">
+
+			<div id="card-inside">
+				<div class="wrap">
+					<img id="letter" src="img/letter.png" alt="old-school-type letter">
+					<i class="em-svg em-heart"></i>
+				</div>
+			</div>
+
+			<div id="card-front">
+				<div class="wrap">
+					<img class="front-image" src="img/bkgnd.png" alt="Front Page">
+					<img class="sthetho animate__animated animate__pulse animate__infinite animate__slow" src="img/sthetho.png">
+					<img class="hbd animate__animated animate__pulse animate__infinite animate__slow animate__delay-1s" src="img/happybday.png" alt="Happy Birthday">
+					<div class="lines">
+						<p> <b>You're so adorable 'cause ... you're a dumbo. </b> </p>
+					</div>
+				</div>
+
+				<div class="card-front_inside">
+					<center><img class="front-inside-image" src="img/icons.png"><center>
+					<button id="close" data-balloon="Close!" data-balloon-length="small" data-balloon-pos="right" data-balloon-visible>&lt;</button>
+				</div>
+
+				<button id="open" data-balloon="Open!" data-balloon-length="small" data-balloon-pos="left" data-balloon-visible>&gt;</button>
+
+			</div>
+		</div>
+		<script  src="js/index.js"></script>
+	</body>
+</html>
